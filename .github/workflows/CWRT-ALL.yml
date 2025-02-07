@@ -4,8 +4,8 @@ name: CWRT-ALL
 #CI计划
 on:
   #自动编译：每周早上6点
-  schedule:
-    - cron: 0 22 * * 0
+  #schedule:
+    #- cron: 0 22 * * 0
   #手动编译
   workflow_dispatch:
     inputs:
@@ -52,9 +52,9 @@ jobs:
       fail-fast: false
       max-parallel: 3
       matrix:
-        TARGET: [MTK-7981, MTK-7986]
+        TARGET: [MTK-7981]
         REPO_INFO:
-          - {SOURCE: hanwckf/immortalwrt-mt798x, BRANCH: openwrt-21.02}
+          #- {SOURCE: hanwckf/immortalwrt-mt798x, BRANCH: openwrt-21.02}
           - {SOURCE: padavanonly/immortalwrt-mt798x, BRANCH: openwrt-21.02}
           #- {SOURCE: padavanonly/immortalwrt-mt798x-23.05, BRANCH: openwrt-23.05}
 
